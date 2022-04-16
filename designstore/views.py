@@ -2,18 +2,25 @@ from django.shortcuts import render, redirect
 from . import forms
 
 from .models import TestItems
+from .forms import ItemForm
 
 # Create your views here.
 
 def add_item(request):
     if request.method == "POST":
-        name = request.POST.get('item_name')
-        done = 'done' in request.POST
-        TestItems.objects.create(name=name, done=done)
+        #name = request.POST.get('item_name') //old method
+        #done = 'done' in request.POST //old method
+        # TestItems.objects.create(name=name, done=done) //old method
 
-        return redirect('designstore')
+        form = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('designstore')
 
-    context = {}
+    form = ItemForm()
+    context = {
+        'form' : form 
+    }
     return render(request, 'designstore/add_item.html',context)
 
 
