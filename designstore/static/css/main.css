@@ -1,0 +1,64 @@
+/*  git add part 3*/
+
+body{
+    background-color: blue;
+  }
+  
+  #cart-icon{
+      width:25px;
+      display: inline-block;
+      margin-left: 15px;
+  }
+  
+  /* git add part 4*/
+  .thumbnail{
+      width: 100%;
+      height: 200px;
+  }
+  
+  .product{
+      border-radius: 0 0 4px 4px;
+    margin-top: 5px;
+  }
+  
+  .btn{
+    color: white;
+    background-color: grey;
+    margin-bottom: 20px;
+  }
+  
+  #login-btn{
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  #testimonial_info{
+    width: 50%;
+    float: left;
+  }
+  
+  @media (max-width: 991px) {
+  
+  }
+  
+  @media (max-width: 768px) {
+  
+    /*.product_img{
+      width: 70%;
+      height: 200px;
+    }*/
+  
+   }
+  
+  @media (max-width: 576px) {
+  
+     .product_img{
+       width: 100%;
+       height: 200px;
+     }
+     #testimonial_info{
+       width: 100%;
+     }
+  
+  
+   }
