@@ -9,4 +9,6 @@ urlpatterns = [
 	path('checkout/', views.checkout, name="checkout"),
     path('viewitem/', views.viewitem, name="viewitem"),
 	#path('formpage/', views.form_name_view, name="form_name"),
+	path('add', views.add_item, name="add"),
 ]
+

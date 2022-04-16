@@ -1,9 +1,29 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . import forms
 
+from .models import TestItems
+
 # Create your views here.
-def designstore(request):
+
+def add_item(request):
+    if request.method == "POST":
+        name = request.POST.get('item_name')
+        done = 'done' in request.POST
+        TestItems.objects.create(name=name, done=done)
+
+        return redirect('designstore')
+
     context = {}
+    return render(request, 'designstore/add_item.html',context)
+
+
+def designstore(request):
+
+    items = TestItems.objects.all()
+    context = {
+        'items' : items
+    }
+    #context = {}
     return render(request, 'designstore/designstore.html',context)
 
 def cart(request):

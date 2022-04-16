@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('designstore.urls')),
     re_path(r'^formpage/', views.form_name_view, name="form_name"),
+    path('add', views.add_item, name="add"),
 ]
