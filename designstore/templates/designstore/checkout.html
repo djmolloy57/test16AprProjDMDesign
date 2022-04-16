@@ -1,0 +1,65 @@
+{% extends 'designstore/main.html' %}
+{% load static %}
+{% block content %}
+     <div class="row">
+		<div class="col-lg-6">
+			<div class="box-element" id="form-wrapper">
+				<form id="form">
+					<div id="user-info">
+						<div class="form-field">
+							<input required class="form-control" type="text" id="name" name="name" placeholder="Name.." data-name=name>
+						</div>
+						<div class="form-field">
+							<input required class="form-control" type="email" id="email" name="email" placeholder="Email..">
+						</div>
+            <div class="form-field">
+              <label for="type">Choose design type:</label>
+                  <select id="type" name="type">
+                    <option value="Icon">Icon</option>
+                    <option value="Poster">Poster</option>
+                    <option value="Logo">Logo</option>
+                  </select>
+						</div>
+            <div class="form-field">
+							<input required class="form-control" type="text" id="description" name="description" placeholder="description..">
+						</div>
+            <div class="form-field">
+              <input required class="form-control" type="text" id="size" name="size" placeholder="size..">
+            </div>
+					</div>
+
+					<div id="shipping-info">
+						<hr>
+						<p>Shipping Information:</p>
+						<hr>
+						<div class="form-field">
+							<input class="form-control" type="text" id="address" name="address" placeholder="Address..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" id="city" name="city" placeholder="City..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" id="state" name="state" placeholder="State..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" id="zipcode" name="zipcode" placeholder="Zip code..">
+						</div>
+						<div class="form-field">
+							<input class="form-control" type="text" id="country" name="country" placeholder="Zip code..">
+						</div>
+					</div>
+
+					<hr>
+					<input id="form-button" class="btn btn-success btn-block update-cart" type="submit" value="Continue">
+				</form>
+			</div>
+
+		</div>
+
+		<div class="col-lg-6">
+			<div class="box-element">
+
+			</div>
+		</div>
+	</div>
+{% endblock content %}

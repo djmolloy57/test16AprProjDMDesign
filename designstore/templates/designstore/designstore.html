@@ -1,0 +1,81 @@
+{% extends 'designstore/main.html' %}
+{% load static %}
+{% block content %}
+  <h3>Sample of our Designs </h3>
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 col-6">
+      <h4>Product 1</h4>
+      <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+      <div class="product">
+        <h6><strong>JM Motors Testimonial</strong></h6>
+        <p>Loved the Logo DM Design produced for us!!</p>
+        <hr>
+        <a class="btn btn-outline-success"  href="{% url 'viewitem' %}">View</a>
+        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-6">
+      <h4>Product 2</h4>
+      <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+      <div class="product">
+        <h6><strong>AH Contruction Testimonial</strong></h6>
+        <p>Loved the Poster DM Design produced for us!!</p>
+        <hr>
+        <a class="btn btn-outline-success" href="{% url 'viewitem' %}">View</a>
+        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-6">
+      <h4>Product 3</h4>
+      <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+      <div class="product">
+        <h6><strong>VM Jwelers Testimonial</strong></h6>
+        <p>Loved the Logo DM Design produced for us!!</p>
+        <hr>
+        <a class="btn btn-outline-success" href="{% url 'viewitem' %}">View</a>
+        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-6">
+      <h4>Product 4</h4>
+      <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+      <div class="product">
+        <h6><strong>PA Music Testimonial</strong></h6>
+        <p>DM Design designed a great logo for us, delivered on time!!</p>
+        <hr>
+        <a class="btn btn-outline-success" href="{% url 'viewitem' %}">View</a>
+        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-6">
+      <h4>Product 5</h4>
+      <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+      <div class="product">
+        <h6><strong>NM Suppliers Testimonial</strong></h6>
+        <p>DM Design designed a great poster for us, delivered on time!!</p>
+        <hr>
+        <a class="btn btn-outline-success" href="{% url 'viewitem' %}">View</a>
+        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6 col-6">
+      <h4>Product 6</h4>
+      <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+      <div class="product">
+        <h6><strong>JK Supermarket Testimonials</strong></h6>
+        <p>DM Design designed a great icon for us, delivered on time!!</p>
+        <hr>
+        <a class="btn btn-outline-success" href="{% url 'viewitem' %}">View</a>
+        <button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+
+      </div>
+    </div>
+
+
+  </div>
+{% endblock content %}

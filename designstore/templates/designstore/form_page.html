@@ -1,0 +1,10 @@
+{% extends 'designstore/main.html' %}
+{% load static %}
+{% block content %}
+  <h3>Fill out the form!</h3>
+    <form method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+{% endblock content %}
