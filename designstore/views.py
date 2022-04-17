@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from . import forms
 
 from .models import TestItems
@@ -23,6 +23,30 @@ def add_item(request):
     }
     return render(request, 'designstore/add_item.html',context)
 
+def edit_item(request, item_id):
+    item = get_object_or_404(TestItems, id=item_id) #get instance of TestItems model with an id equal to the id passed into the view via url
+    form = ItemForm(request.POST, instance=item)
+    if form.is_valid():
+        form.save()
+        return redirect('designstore')
+ 
+    form = ItemForm(instance=item)
+    context = {
+        'form' : form 
+    }
+    return render(request, 'designstore/edit_item.html', context)
+
+
+def toggle_item(request, item_id):
+    item = get_object_or_404(TestItems, id=item_id)
+    item.done = not item.done 
+    item.save() 
+    return redirect('designstore')
+
+def delete_item(request, item_id):
+    item = get_object_or_404(TestItems, id=item_id)
+    item.delete() 
+    return redirect('designstore')
 
 def designstore(request):
 
